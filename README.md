@@ -106,7 +106,7 @@ To provide a comprehensive overview of the project and its outcomes, consider in
     `![Azure Databricks Workspace](images/azure_databricks_workspace.png)`
 * **Screenshot 7: Azure Portal - ADLS Gen2 (showing folder structure).**
 
-<img src="containers.jpeg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
+<img src="containers.jpeg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="45%">
 
 ---
 
