@@ -76,21 +76,15 @@ To replicate this project and run the solution in your own Azure environment, yo
 
 ## 💡 Key Learnings & Insights
 
-This project provided hands-on experience with building a robust data pipeline and yielded valuable insights from the e-commerce dataset.
+Building this robust data pipeline offered crucial insights from the e-commerce data:
 
-* **Data Quality Challenges & Solutions:**
-    * **Handling Missing `CustomerID`:** Successfully identified and addressed missing `CustomerID` values. For analyses requiring a customer identity, these records were strategically excluded; for overall sales metrics, they were included to maintain total revenue accuracy.
-    * **Data Type Conversions:** Implemented robust data type conversions for `Quantity`, `UnitPrice` (to numeric types) and `InvoiceDate` (to datetime objects), which was crucial for accurate calculations and time-series analysis.
-    * **Invalid Data Filtering:** Developed logic to filter out or appropriately handle records with negative `Quantity` or zero/negative `UnitPrice`, which often represent returns or erroneous entries, ensuring data integrity.
-* **Key Business Insights Derived:**
-    * **Sales Performance Analysis:** Gained insights into overall revenue, average order value, and identified distinct sales trends on a monthly and daily basis, highlighting peak periods.
-    * **Customer Behavior:** Analyzed customer purchasing patterns, allowing for the identification of high-value customers, frequent buyers, and their geographical distribution.
-    * **Product Popularity:** Determined top-selling products by both quantity and revenue, providing valuable information for inventory management, marketing campaigns, and product development strategies.
-    * **Geographical Sales Distribution:** Visualized sales performance across different countries, pinpointing key markets and potential growth regions.
-* **Architectural & Technical Learnings:**
-    * **Medallion Architecture Mastery:** Gained practical, end-to-end experience in designing and implementing a data pipeline across the Bronze, Silver, and Gold layers, understanding the purpose and value of each stage.
-    * **Delta Lake & ACID Transactions:** Solidified understanding of Delta Lake's features, including ACID transactions, schema enforcement, and time travel, which are vital for building reliable and scalable data lakes.
-    * **Azure Ecosystem Integration:** Successfully integrated multiple Azure services (ADLS Gen2, Databricks, Key Vault, Power BI), demonstrating proficiency in building comprehensive cloud-based data solutions.
+* **Data Quality Solved:** We successfully handled missing `CustomerID`s, ensuring accurate sales metrics. Critical data types for `Quantity`, `UnitPrice`, and `InvoiceDate` were corrected for precise calculations and time-series analysis. We also filtered out invalid entries like negative quantities, maintaining data integrity.
+* **Business Insights Unlocked:**
+    * **Sales Performance:** Understood overall revenue, average order value, and identified peak sales trends (monthly/daily).
+    * **Customer Behavior:** Pinpointed high-value customers, frequent buyers, and their geographical spread.
+    * **Product Popularity:** Discovered top-selling products by quantity and revenue, aiding inventory and marketing.
+    * **Geographical Sales:** Visualized sales performance across countries to identify key markets.
+* **Technical Mastery:** Gained hands-on experience with the **Medallion Architecture**, implementing it end-to-end. Solidified understanding of **Delta Lake's ACID transactions** and **Azure ecosystem integration** (ADLS Gen2, Databricks, Key Vault, Power BI) for building reliable cloud solutions.
 
 ## 🔮 Future Enhancements Section
 
