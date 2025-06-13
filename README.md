@@ -14,7 +14,6 @@ The primary goal is to transform raw transactional data into structured, high-qu
 * **Azure Data Lake Storage Gen2 (ADLS Gen2):** Scalable, hierarchical storage for all Data Lakehouse layers.
 * **Azure Databricks:** A unified analytics platform powered by Apache Spark, used for orchestrating and executing data transformations (ETL/ELT) across the layers.
 * **Azure Key Vault:** Securely manages and stores sensitive credentials and secrets, ensuring secure access to Azure resources.
-* **Azure Event Hubs (Planeado/Futuro):** For real-time data ingestion (streaming)
 * **Microsoft Power BI:** A leading Business Intelligence tool for creating interactive dashboards and reports, consuming data from the Gold layer.
 
 <img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
@@ -124,4 +123,4 @@ To provide a comprehensive overview of the project and its outcomes, consider in
 
 * **Braulio Tomas Fernandez Trejo**
 * **LinkedIn:** [Link to your LinkedIn Profile]
-* **GitHub:** [Link to your GitHub Profile (this repository is part of it)]
+* **GitHub:** [https://github.com/Tomcodedays]
