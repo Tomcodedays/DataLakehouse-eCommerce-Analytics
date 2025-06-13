@@ -10,8 +10,7 @@ El objetivo es transformar datos transaccionales brutos en información estructu
 
 ## 🚀 Arquitectura de la Solución
 
-Aquí iría un diagrama simple de la arquitectura.
-Puedes usar herramientas como draw.io, Lucidchart, o incluso DALL-E/Midjourney para generar un diagrama visual y luego insertarlo aquí.
+![Texto alternativo para el diagrama](ruta/a/tu/imagen/mi_diagrama.jpg)
 
 **Componentes clave:**
 * **Azure Data Lake Storage Gen2 (ADLS Gen2):** Almacenamiento escalable para todas las capas del Data Lakehouse.
