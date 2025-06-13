@@ -85,7 +85,28 @@ Building this robust data pipeline offered crucial insights from the e-commerce 
     * **Product Popularity:** Discovered top-selling products by quantity and revenue, aiding inventory and marketing.
     * **Geographical Sales:** Visualized sales performance across countries to identify key markets.
 * **Technical Mastery:** Gained hands-on experience with the **Medallion Architecture**, implementing it end-to-end. Solidified understanding of **Delta Lake's ACID transactions** and **Azure ecosystem integration** (ADLS Gen2, Databricks, Key Vault, Power BI) for building reliable cloud solutions.
-* 
+  
+---
+
+## 📸 Visuals & Dashboards
+
+To provide a comprehensive overview of the project and its outcomes, consider including the following visuals:
+
+* **Screenshot 1: Raw Data Sample in Databricks.**
+    `![Raw Data Sample](images/raw_data_sample.png)`
+* **Screenshot 2: Silver Layer Data Sample.**
+    `![Silver Layer Data Sample](images/silver_data_sample.png)`
+* **Screenshot 3: Gold Layer Data Sample.**
+    `![Gold Layer Data Sample](images/gold_data_sample.png)`
+* **Screenshot 4: Power BI Dashboard - Sales Performance.**
+    `![Power BI Dashboard - Sales Performance](images/powerbi_dashboard_sales.png)`
+* **Screenshot 5: Power BI Dashboard - Customer/Product Insights.**
+    `![Power BI Dashboard - Customer/Product Insights](images/powerbi_dashboard_customer_product.png)`
+* **Screenshot 6: Azure Portal - Databricks Workspace.**
+    `![Azure Databricks Workspace](images/azure_databricks_workspace.png)`
+* **Screenshot 7: Azure Portal - ADLS Gen2 (showing folder structure).**
+    `![ADLS Gen2 Folder Structure](images/adls_folder_structure.png)`
+
 ---
 
 ## 🔮 Future Enhancements Section
