@@ -1,23 +1,21 @@
-# 📊 Proyecto Data Lakehouse de E-commerce con Azure Databricks y Power BI
+# 📊 E-commerce Data Lakehouse Project with Azure Databricks & Power BI
 
-## 📝 Descripción del Proyecto
+## 📝 Project Overview
 
-Este proyecto implementa una solución de **Data Lakehouse** en Microsoft Azure para procesar y analizar datos de transacciones de comercio electrónico. Utiliza una arquitectura moderna de Medallion (Raw/Bronze, Silver, Gold) y aprovecha los servicios de Azure para la ingesta, transformación y almacenamiento de datos, preparándolos para análisis y **Business Intelligence a través de Power BI**.
+This project implements a **Data Lakehouse solution** on Microsoft Azure to process and analyze e-commerce transaction data. It leverages a modern **Medallion architecture** (Bronze, Silver, Gold layers) and utilizes key Azure services for data ingestion, transformation, storage, and visualization.
 
-El objetivo es transformar datos transaccionales brutos en información estructurada y de alta calidad para obtener insights sobre el rendimiento de ventas y el comportamiento del cliente, y visualizarlos de manera efectiva.
+The primary goal is to transform raw transactional data into structured, high-quality information. This refined data then enables powerful analytics and **Business Intelligence (BI) insights** into sales performance, customer behavior, and product trends, all visualized effectively through **Power BI**.
 
+---
 
+## 🚀 Solution Architecture
 
-## 🚀 Arquitectura de la Solución
-
-
-
-**Componentes clave:**
-* **Azure Data Lake Storage Gen2 (ADLS Gen2):** Almacenamiento escalable para todas las capas del Data Lakehouse.
-* **Azure Databricks:** Plataforma de Spark para la orquestación y transformación de datos (ELT).
-* **Azure Key Vault:** Gestión segura de credenciales y secretos.
-* **Azure Event Hubs (Planeado/Futuro):** Para la ingesta de datos en tiempo real (streaming).
-* **Microsoft Power BI:** Herramienta de Business Intelligence para la visualización y creación de dashboards.
+**Key Components:**
+* **Azure Data Lake Storage Gen2 (ADLS Gen2):** Scalable, hierarchical storage for all Data Lakehouse layers.
+* **Azure Databricks:** A unified analytics platform powered by Apache Spark, used for orchestrating and executing data transformations (ETL/ELT) across the layers..
+* **Azure Key Vault:** Securely manages and stores sensitive credentials and secrets, ensuring secure access to Azure resources.
+* **Azure Event Hubs (Planeado/Futuro):** For real-time data ingestion (streaming)
+* **Microsoft Power BI:** A leading Business Intelligence tool for creating interactive dashboards and reports, consuming data from the Gold layer.
 
 <img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
 
