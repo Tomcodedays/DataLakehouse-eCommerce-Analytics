@@ -85,6 +85,8 @@ Building this robust data pipeline offered crucial insights from the e-commerce 
     * **Product Popularity:** Discovered top-selling products by quantity and revenue, aiding inventory and marketing.
     * **Geographical Sales:** Visualized sales performance across countries to identify key markets.
 * **Technical Mastery:** Gained hands-on experience with the **Medallion Architecture**, implementing it end-to-end. Solidified understanding of **Delta Lake's ACID transactions** and **Azure ecosystem integration** (ADLS Gen2, Databricks, Key Vault, Power BI) for building reliable cloud solutions.
+* 
+---
 
 ## 🔮 Future Enhancements Section
 
