@@ -64,7 +64,7 @@ To replicate this project and run the solution in your own Azure environment, yo
 8.  **Power BI Desktop** 
 ---
 
-## 🚀 Pasos de Ejecución
+## 🚀 Execution Steps
 
 1.  **Raw Data Upload:** Upload the `ecommerce-customers.csv` file (or the dataset's main CSV file) to the `bronze` layer (or a designated `raw` container/folder) in your ADLS Gen2 account.
 2.  **Import Databricks Notebooks:** Import the provided Jupyter notebooks (e.g., `notebooks/01_Raw_to_Silver_Processing.ipynb`, `notebooks/02_Silver_to_Gold_Aggregation.ipynb`) into your Azure Databricks Workspace.
