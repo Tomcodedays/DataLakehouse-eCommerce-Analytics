@@ -93,11 +93,17 @@ Building this robust data pipeline offered crucial insights from the e-commerce 
 To provide a comprehensive overview of the project and its outcomes, consider including the following visuals:
 
 * **Screenshot 1: Data Pipeline Flow in Databricks.**
+
 <img src="pipeline.png" width="80%">
+
 * **Screenshot 2: Gold Layer Tables in ADLS Gen2.**
+
 <img src="gold_container.jpeg" width="80%">
+
 * **Screenshot 3: Power BI Dashboard - Sales Performance.**
+
 <img src="dashboard.jpeg" width="80%">
+
 * **Screenshot 4: Azure Portal - ADLS Gen2 (showing folder structure).**
 
 <img src="containers.jpeg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="80%">
