@@ -92,8 +92,8 @@ Building this robust data pipeline offered crucial insights from the e-commerce 
 
 To provide a comprehensive overview of the project and its outcomes, consider including the following visuals:
 
-* **Screenshot 1: Raw Data Sample in Databricks.**
-    `![Raw Data Sample](images/raw_data_sample.png)`
+* **Screenshot 1: Data Pipeline Flow in Databricks.**
+<img src="pipeline.jpeg" width="80%">
 * **Screenshot 2: Silver Layer Data Sample.**
     `![Silver Layer Data Sample](images/silver_data_sample.png)`
 * **Screenshot 3: Gold Layer Data Sample.**
