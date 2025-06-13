@@ -10,7 +10,7 @@ El objetivo es transformar datos transaccionales brutos en información estructu
 
 ## 🚀 Arquitectura de la Solución
 
-<img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
+
 
 **Componentes clave:**
 * **Azure Data Lake Storage Gen2 (ADLS Gen2):** Almacenamiento escalable para todas las capas del Data Lakehouse.
@@ -19,6 +19,7 @@ El objetivo es transformar datos transaccionales brutos en información estructu
 * **Azure Event Hubs (Planeado/Futuro):** Para la ingesta de datos en tiempo real (streaming).
 * **Microsoft Power BI:** Herramienta de Business Intelligence para la visualización y creación de dashboards.
 
+<img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="30%">
 ---
 
 ## 🗄️ Estructura del Data Lakehouse (Arquitectura Medallion)
