@@ -16,7 +16,7 @@ The primary goal is to transform raw transactional data into structured, high-qu
 * **Azure Key Vault:** Securely manages and stores sensitive credentials and secrets, ensuring secure access to Azure resources.
 * **Microsoft Power BI:** A leading Business Intelligence tool for creating interactive dashboards and reports, consuming data from the Gold layer.
 
-<img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
+<img src="images/Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
 
 ## 🗄️ Data Lakehouse Structure (Medallion Architecture)
 
@@ -93,19 +93,19 @@ Below are key visuals illustrating the project's development and achievements:
 
 * **Screenshot 1: Data Pipeline Flow in Databricks.**
 
-<img src="pipeline.png" width="80%">
+<img src="images/pipeline.png" width="80%">
 
 * **Screenshot 2: Gold Layer Tables in ADLS Gen2.**
 
-<img src="gold_container.jpeg" width="80%">
+<img src="images/gold_container.jpeg" width="80%">
 
 * **Screenshot 3: Power BI Dashboard - Sales Performance.**
 
-<img src="dashboard.jpeg" width="80%">
+<img src="images/dashboard.jpeg" width="80%">
 
 * **Screenshot 4: Azure Portal - ADLS Gen2 (showing folder structure).**
 
-<img src="containers.jpeg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="80%">
+<img src="images/containers.jpeg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="80%">
 
 ---
 
