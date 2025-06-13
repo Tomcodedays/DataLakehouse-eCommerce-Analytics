@@ -65,7 +65,7 @@ To replicate this project and run the solution in your own Azure environment, yo
 
 ## 🚀 Execution Steps
 
-1.  **Raw Data Upload:** Upload the `ecommerce-customers.csv` file (or the dataset's main CSV file) to the `bronze` layer (or a designated `raw` container/folder) in your ADLS Gen2 account.
+1.  **Raw Data Upload:** Upload the `datas.csv` file (or the dataset's main CSV file) to the `bronze` layer (or a designated `raw` container/folder) in your ADLS Gen2 account.
 2.  **Import Databricks Notebooks:** Import the provided Jupyter notebooks (e.g., `notebooks/01_Raw_to_Silver_Processing.ipynb`, `notebooks/02_Silver_to_Gold_Aggregation.ipynb`) into your Azure Databricks Workspace.
 3.  **Attach to Cluster:** Ensure each notebook is attached to your configured Databricks cluster.
 4.  **Execute Notebook Cells Sequentially:**
@@ -89,7 +89,7 @@ Building this robust data pipeline offered crucial insights from the e-commerce 
 
 ## 📸 Visuals & Dashboards
 
-To provide a comprehensive overview of the project and its outcomes, consider including the following visuals:
+Below are key visuals illustrating the project's development and achievements:
 
 * **Screenshot 1: Data Pipeline Flow in Databricks.**
 
