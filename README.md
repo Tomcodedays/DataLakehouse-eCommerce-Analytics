@@ -61,9 +61,7 @@ To replicate this project and run the solution in your own Azure environment, yo
 6.  A **Databricks Secret Scope** linked to your Azure Key Vault.
     * Ensure that the secrets for `client-id`, `client-secret`, and `tenant-id` are stored in Key Vault and are accessible via this Secret Scope.
 7.  A **Databricks cluster** configured (e.g., in "Single User" mode, assigned to the Service Principal).
-8.  **Power BI Desktop** installed on your local machine if you intend to replicate the visualization phase.
-**Nota importante:** ¡Nunca subas tus credenciales o secretos directamente a GitHub! Para eso utilizamos Azure Key Vault.
-
+8.  **Power BI Desktop** 
 ---
 
 ## 🚀 Pasos de Ejecución
