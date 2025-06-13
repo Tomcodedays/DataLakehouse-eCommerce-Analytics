@@ -12,7 +12,7 @@ The primary goal is to transform raw transactional data into structured, high-qu
 
 **Key Components:**
 * **Azure Data Lake Storage Gen2 (ADLS Gen2):** Scalable, hierarchical storage for all Data Lakehouse layers.
-* **Azure Databricks:** A unified analytics platform powered by Apache Spark, used for orchestrating and executing data transformations (ETL/ELT) across the layers..
+* **Azure Databricks:** A unified analytics platform powered by Apache Spark, used for orchestrating and executing data transformations (ETL/ELT) across the layers.
 * **Azure Key Vault:** Securely manages and stores sensitive credentials and secrets, ensuring secure access to Azure resources.
 * **Azure Event Hubs (Planeado/Futuro):** For real-time data ingestion (streaming)
 * **Microsoft Power BI:** A leading Business Intelligence tool for creating interactive dashboards and reports, consuming data from the Gold layer.
@@ -20,20 +20,22 @@ The primary goal is to transform raw transactional data into structured, high-qu
 <img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
 
 
-## 🗄️ Estructura del Data Lakehouse (Arquitectura Medallion)
+## 🗄️  Data Lakehouse Structure (Medallion Architecture)
 
 El proyecto sigue una arquitectura de Medallion, con las siguientes capas:
 
-* **Raw / Bronze Layer:** Datos crudos, sin modificar, tal como se ingesan. (Ej. `ecommerce-customers.csv` original).
-* **Silver Layer:** Datos limpios, transformados y enriquecidos. Esquema aplicado, nulos y duplicados manejados, tipos de datos corregidos.
-* **Gold Layer:** Datos agregados, preparados para consumo directo por **Business Intelligence (BI)** y análisis de negocio, optimizados para consultas de rendimiento (la capa que Power BI consumirá directamente).
+## 🗄️ Data Lakehouse Structure (Medallion Architecture)
+
+* **Bronze Layer (Raw):** This layer stores raw, immutable data exactly as it's ingested from the source. It acts as a historical archive and a reliable landing zone, preserving the original state of the data.
+* **Silver Layer (Refined):** Data in this layer is cleaned, transformed, and enriched. This includes handling missing values, correcting data types, removing duplicates, and potentially joining data from different sources. It provides a reliable, single source of truth for downstream analytics.
+* **Gold Layer (Curated for BI):** This is the highly refined, aggregated, and optimized layer, designed for direct consumption by business users and BI tools. It typically contains denormalized tables, facts, and dimensions, making it ideal for high-performance querying and reporting.
 
 ---
 
-## ⚙️ Tecnologías Utilizadas
+## ⚙️ Technologies Used
 
 * **Cloud Platform:** Microsoft Azure
-* **Data Storage:** Azure Data Lake Storage Gen2
+* **Data Storage:** Azure Data Lake Storage Gen2 (ADLS Gen2)
 * **Data Processing & Orchestration:** Azure Databricks (Apache Spark, Delta Lake)
 * **Secret Management:** Azure Key Vault
 * **Streaming Ingestion (Planned):** Azure Event Hubs
@@ -42,74 +44,72 @@ El proyecto sigue una arquitectura de Medallion, con las siguientes capas:
 
 ---
 
-## 📦 Origen de los Datos
+## 📦 Data Source
 
-Los datos utilizados en este proyecto corresponden a un dataset de transacciones de e-commerce.
+The data used in this project consists of transactional records from an e-commerce platform.
 
-* **Fuente:** [https://www.kaggle.com/datasets/carrie1/ecommerce-data/code?datasetId=1985)](https://www.kaggle.com/datasets/carrie1/ecommerce-data/code?datasetId=1985)
-* **Archivo de ejemplo:** `ecommerce-customers.csv` (contiene `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`).
-
+* **Source:** [Online Retail Data - Kaggle](https://www.kaggle.com/datasets/carrie1/ecommerce-data/code?datasetId=1985)
+* **File Example:** `ecommerce-customers.csv` (containing fields like `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`).
 ---
 
-## 🛠️ Configuración y Prerequisitos
+🛠️ Setup and Prerequisites
 
-Para replicar este proyecto, necesitarás:
+To replicate this project and run the solution in your own Azure environment, you will need:
 
-1.  Una suscripción de Azure activa.
-2.  Un Workspace de Azure Databricks.
-3.  Una cuenta de Azure Data Lake Storage Gen2.
-4.  Un Azure Key Vault.
-5.  Un Service Principal (App Registration) de Azure AD con los permisos adecuados:
-    * **Data Lake:** Rol de "Storage Blob Data Contributor" en ADLS Gen2.
-    * **Key Vault:** Rol de "Key Vault Secrets User" en el Key Vault.
-6.  Un Secret Scope en Databricks vinculado a tu Key Vault.
-    * Asegúrate de que los secretos `client-id`, `client-secret`, `tenant-id` estén almacenados en Key Vault y sean accesibles desde el Secret Scope.
-7.  Un cluster de Databricks configurado (ej. modo "Single User" con el Service Principal asignado).
-8.  **Power BI Desktop** instalado si deseas replicar la fase de visualización.
-
+1.  An active **Azure Subscription**.
+2.  An **Azure Databricks Workspace**.
+3.  An **Azure Data Lake Storage Gen2** account.
+4.  An **Azure Key Vault** instance.
+5.  An **Azure AD Service Principal** (App Registration) with the following permissions:
+    * **Data Lake:** "Storage Blob Data Contributor" role on your ADLS Gen2 account.
+    * **Key Vault:** "Key Vault Secrets User" role on your Azure Key Vault.
+6.  A **Databricks Secret Scope** linked to your Azure Key Vault.
+    * Ensure that the secrets for `client-id`, `client-secret`, and `tenant-id` are stored in Key Vault and are accessible via this Secret Scope.
+7.  A **Databricks cluster** configured (e.g., in "Single User" mode, assigned to the Service Principal).
+8.  **Power BI Desktop** installed on your local machine if you intend to replicate the visualization phase.
 **Nota importante:** ¡Nunca subas tus credenciales o secretos directamente a GitHub! Para eso utilizamos Azure Key Vault.
 
 ---
 
 ## 🚀 Pasos de Ejecución
 
-1.  **Carga de datos raw:** Sube el archivo `ecommerce-customers.csv` (o el dataset `online_tomretail_transactions/data.csv`) a la capa `bronze` de tu ADLS Gen2.
-2.  **Abrir Notebook en Databricks:** Importa los notebooks proporcionados (`notebooks/01_Raw_to_Silver.ipynb`, `notebooks/02_Silver_to_Gold_Aggregation.ipynb`, etc.) a tu Workspace de Databricks.
-3.  **Adjuntar al Cluster:** Asegúrate de que el notebook esté adjunto a tu cluster de Databricks.
-4.  **Ejecutar celdas:** Sigue el orden de las celdas en el notebook:
-    * **Celda 1 (Configuración):** Establece las configuraciones de Spark para la conexión a ADLS Gen2 usando Key Vault.
-    * **Celda 2 (Lectura Raw):** Lee los datos del CSV desde la capa `bronze`.
-    * **Celda 3 (Limpieza Silver):** Aplica transformaciones de limpieza y prepara los datos para la capa `silver`.
-    * *(Agrega más pasos a medida que construyamos las capas Silver y Gold y los guardemos, incluyendo cómo Power BI se conectaría a la capa Gold)*
+1.  **Raw Data Upload:** Upload the `ecommerce-customers.csv` file (or the dataset's main CSV file) to the `bronze` layer (or a designated `raw` container/folder) in your ADLS Gen2 account.
+2.  **Import Databricks Notebooks:** Import the provided Jupyter notebooks (e.g., `notebooks/01_Raw_to_Silver_Processing.ipynb`, `notebooks/02_Silver_to_Gold_Aggregation.ipynb`) into your Azure Databricks Workspace.
+3.  **Attach to Cluster:** Ensure each notebook is attached to your configured Databricks cluster.
+4.  **Execute Notebook Cells Sequentially:**
+
 
 ---
 
-## 💡 Insights y Aprendizajes (Placeholder - Lo llenaremos al final)
+## 💡 Key Learnings & Insights
 
-* [Ej. Descripción de la calidad de datos encontrada: nulos en CustomerID, etc.]
-* [Ej. Patrones de ventas por país o por fecha.]
-* [Ej. Cómo se manejaron las transacciones canceladas.]
-* [Ej. Métricas clave generadas para el análisis en Power BI.]
+This project provided hands-on experience with building a robust data pipeline and yielded valuable insights from the e-commerce dataset.
+
+* **Data Quality Challenges & Solutions:**
+    * **Handling Missing `CustomerID`:** Successfully identified and addressed missing `CustomerID` values. For analyses requiring a customer identity, these records were strategically excluded; for overall sales metrics, they were included to maintain total revenue accuracy.
+    * **Data Type Conversions:** Implemented robust data type conversions for `Quantity`, `UnitPrice` (to numeric types) and `InvoiceDate` (to datetime objects), which was crucial for accurate calculations and time-series analysis.
+    * **Invalid Data Filtering:** Developed logic to filter out or appropriately handle records with negative `Quantity` or zero/negative `UnitPrice`, which often represent returns or erroneous entries, ensuring data integrity.
+* **Key Business Insights Derived:**
+    * **Sales Performance Analysis:** Gained insights into overall revenue, average order value, and identified distinct sales trends on a monthly and daily basis, highlighting peak periods.
+    * **Customer Behavior:** Analyzed customer purchasing patterns, allowing for the identification of high-value customers, frequent buyers, and their geographical distribution.
+    * **Product Popularity:** Determined top-selling products by both quantity and revenue, providing valuable information for inventory management, marketing campaigns, and product development strategies.
+    * **Geographical Sales Distribution:** Visualized sales performance across different countries, pinpointing key markets and potential growth regions.
+* **Architectural & Technical Learnings:**
+    * **Medallion Architecture Mastery:** Gained practical, end-to-end experience in designing and implementing a data pipeline across the Bronze, Silver, and Gold layers, understanding the purpose and value of each stage.
+    * **Delta Lake & ACID Transactions:** Solidified understanding of Delta Lake's features, including ACID transactions, schema enforcement, and time travel, which are vital for building reliable and scalable data lakes.
+    * **Azure Ecosystem Integration:** Successfully integrated multiple Azure services (ADLS Gen2, Databricks, Key Vault, Power BI), demonstrating proficiency in building comprehensive cloud-based data solutions.
+
+## 🔮 Future Enhancements Section
+
+* **Real-time Data Ingestion:** Implementing streaming data ingestion using Azure Event Hubs to process real-time e-commerce transactions, moving towards a truly hybrid Lambda/Kappa architecture.
+* **Advanced Analytics:** Developing machine learning models (e.g., customer segmentation, churn prediction, recommendation systems) based on the curated Gold layer data.
+* **Automated Orchestration:** Automating the entire data pipeline using Azure Data Factory or Databricks Workflows for scheduled and event-driven execution.
+* **Data Governance & Cataloging:** Implementing Azure Purview for data governance, discovery, and cataloging.
 
 ---
 
-## 🔮 Futuras Mejoras
-
-* Implementación de la ingesta de datos en streaming usando Azure Event Hubs.
-* Creación de **dashboards interactivos en Power BI** consumiendo la capa Gold.
-* Automatización del pipeline con Azure Data Factory o Databricks Workflows.
-* Enriquecimiento de datos con otras fuentes.
-
----
-
-## 📧 Contacto
+## 📧 Contact
 
 * **Braulio Tomas Fernandez Trejo**
-* **LinkedIn:** [Enlace a tu perfil de LinkedIn]
-* **GitHub:** [Enlace a tu perfil de GitHub (este repositorio es parte de él)]
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+* **LinkedIn:** [Link to your LinkedIn Profile]
+* **GitHub:** [Link to your GitHub Profile (this repository is part of it)]
