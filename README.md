@@ -43,7 +43,7 @@ The primary goal is to transform raw transactional data into structured, high-qu
 The data used in this project consists of transactional records from an e-commerce platform.
 
 * **Source:** [Online Retail Data - Kaggle](https://www.kaggle.com/datasets/carrie1/ecommerce-data/code?datasetId=1985)
-* **File Example:** `ecommerce-customers.csv` (containing fields like `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`).
+* **File Example:** `data.csv` (containing fields like `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`).
 ---
 
 🛠️ Setup and Prerequisites
