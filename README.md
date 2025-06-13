@@ -95,16 +95,10 @@ To provide a comprehensive overview of the project and its outcomes, consider in
 * **Screenshot 1: Data Pipeline Flow in Databricks.**
 <img src="pipeline.png" width="80%">
 * **Screenshot 2: Silver Layer Data Sample.**
-    `![Silver Layer Data Sample](images/silver_data_sample.png)`
+<img src="pipeline.png" width="80%">
 * **Screenshot 3: Gold Layer Data Sample.**
-    `![Gold Layer Data Sample](images/gold_data_sample.png)`
-* **Screenshot 4: Power BI Dashboard - Sales Performance.**
-    `![Power BI Dashboard - Sales Performance](images/powerbi_dashboard_sales.png)`
-* **Screenshot 5: Power BI Dashboard - Customer/Product Insights.**
-    `![Power BI Dashboard - Customer/Product Insights](images/powerbi_dashboard_customer_product.png)`
-* **Screenshot 6: Azure Portal - Databricks Workspace.**
-    `![Azure Databricks Workspace](images/azure_databricks_workspace.png)`
-* **Screenshot 7: Azure Portal - ADLS Gen2 (showing folder structure).**
+<img src="gold_container.png" width="80%">
+* **Screenshot 4: Azure Portal - ADLS Gen2 (showing folder structure).**
 
 <img src="containers.jpeg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="80%">
 
