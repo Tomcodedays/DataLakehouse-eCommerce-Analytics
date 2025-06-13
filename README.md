@@ -6,7 +6,7 @@ Este proyecto implementa una solución de **Data Lakehouse** en Microsoft Azure 
 
 El objetivo es transformar datos transaccionales brutos en información estructurada y de alta calidad para obtener insights sobre el rendimiento de ventas y el comportamiento del cliente, y visualizarlos de manera efectiva.
 
----
+
 
 ## 🚀 Arquitectura de la Solución
 
@@ -19,8 +19,8 @@ El objetivo es transformar datos transaccionales brutos en información estructu
 * **Azure Event Hubs (Planeado/Futuro):** Para la ingesta de datos en tiempo real (streaming).
 * **Microsoft Power BI:** Herramienta de Business Intelligence para la visualización y creación de dashboards.
 
-<img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="30%">
----
+<img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
+
 
 ## 🗄️ Estructura del Data Lakehouse (Arquitectura Medallion)
 
