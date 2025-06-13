@@ -10,7 +10,7 @@ El objetivo es transformar datos transaccionales brutos en información estructu
 
 ## 🚀 Arquitectura de la Solución
 
-<img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="75%">
+<img src="Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
 
 **Componentes clave:**
 * **Azure Data Lake Storage Gen2 (ADLS Gen2):** Almacenamiento escalable para todas las capas del Data Lakehouse.
