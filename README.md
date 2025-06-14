@@ -68,7 +68,7 @@ To replicate this project and run the solution in your own Azure environment, yo
 1. **Configure Azure Key Vault Secrets and Databricks Secret Scope:**
 Ensure your Azure Key Vault contains the necessary secrets: client-id, client-secret, and tenant-id for your Service Principal.
 Create a Databricks Secret Scope (e.g., ecommerce-scope) and link it to your Azure Key Vault. This allows your Databricks notebooks to securely retrieve credentials for connecting to ADLS Gen2.
-2.  **Raw Data Upload:** Upload the `datas.csv` file (or the dataset's main CSV file) to the `bronze` layer (or a designated `raw` container/folder) in your ADLS Gen2 account.
+2.  **Raw Data Upload:** Upload the `data.csv` file to the `bronze` layer (or a designated `raw` container/folder) in your ADLS Gen2 account.
 3.  **Import Databricks Notebooks:** Import the provided Jupyter notebooks into your Azure Databricks Workspace.
 4.  **Attach to Cluster:** Ensure each notebook is attached to your configured Databricks cluster.
 5.  **Execute Notebook Cells Sequentially:**
