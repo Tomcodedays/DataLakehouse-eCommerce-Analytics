@@ -18,6 +18,8 @@ The primary goal is to transform raw transactional data into structured, high-qu
 
 <img src="images/Diagrama.jpg" alt="Diagrama de Arquitectura del Data Lakehouse de E-commerce" width="35%">
 
+---
+
 ## 🗄️ Data Lakehouse Structure (Medallion Architecture)
 
 * **Bronze Layer (Raw):** This layer stores raw, immutable data exactly as it's ingested from the source. It acts as a historical archive and a reliable landing zone, preserving the original state of the data.
